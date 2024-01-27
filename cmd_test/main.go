@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	// require sqlite | gcc
 	engine, _ := geeorm.NewEngine("sqlite3", "gee.db")
 	defer engine.Close()
 	s := engine.NewSession()
