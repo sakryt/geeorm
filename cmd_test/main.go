@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	// require sqlite | gcc
+	// require sqlite3 | set CGO_ENABLED=1 | MinGW (Minimalist GNU on Windows)
 	engine, _ := geeorm.NewEngine("sqlite3", "gee.db")
 	defer engine.Close()
 	s := engine.NewSession()
