@@ -10,7 +10,7 @@ type sqlite3 struct{}
 
 var _ Dialect = (*sqlite3)(nil)
 
-func init() {
+func Init() {
 	RegisterDialect("sqlite3", &sqlite3{})
 }
 
